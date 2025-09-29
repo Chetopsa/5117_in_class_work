@@ -5,10 +5,10 @@ We will go over steps in lecture. You should fill out the following:
 
 ## What steps do I need to do when I download this repo to get it running?
 
-
+pipenv install
 
 ## What commands starts the server?
-
+flask --app app run --debug
 
 ## Before render
 

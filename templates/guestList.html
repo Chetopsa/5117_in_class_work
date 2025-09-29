@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Guest List{% endblock %}
+{% block content %}
+    <p> guest PAGE</p>
+    <form id="guest-form" method="POST" action="/guestList">
+        <fieldset>
+            <legend>Add Guest</legend>
+            <label for="name">Guest Name:</label>
+            <input type="text" id="name" name="name" required />
+            <button type="submit">Add a Guest !</button>
+        </fieldset>
+    </form>
+
+    <h2>Guest List</h2>
+    <ul>
+        {% for guest in names %}
+            <li>{{ guest.person }} ({{ guest.response_timestamp }})</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
